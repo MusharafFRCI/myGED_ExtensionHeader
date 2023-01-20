@@ -1,0 +1,36 @@
+/* hide sharepoints */
+#spSiteHeader{
+    display: none;
+}
+
+#visibleContent{
+    display:none ;
+}
+
+.root-42{
+    display: none;
+}
+
+/* .root-163{
+    display: none;
+} */
+
+/* #spCommandBar{
+    display: none;
+} */
+
+.el_q_ada2ac09 {
+    display: none;
+}
+/* 
+.webPartContainer{
+    display: none;
+} */
+
+.headerRow-45 {
+    display: none;
+}
+
+.headerRow-77 {
+    display: none;
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/core-build/serve.schema.json",
+  "port": 4321,
+  "https": true,
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://frcidevtest.sharepoint.com/sites/MyAirCalin",
+      "customActions": {
+        "ed8cf08b-fdd2-45fd-8a20-38792436e363": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    },
+    "headerApp": {
+      "pageUrl": "https://frcidevtest.sharepoint.com/sites/MyAirCalin",
+      "customActions": {
+        "ed8cf08b-fdd2-45fd-8a20-38792436e363": {
+          "location": "ClientSideExtension.ApplicationCustomizer",
+          "properties": {
+            "testMessage": "Test message"
+          }
+        }
+      }
+    }
+  }
+}
