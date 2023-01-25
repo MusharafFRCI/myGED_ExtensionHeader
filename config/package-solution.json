@@ -1,9 +1,9 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
-    "name": "MyAircalin-Navigation-solution",
-    "id": "2f47e456-7b60-428b-a348-6607b0439786",
-    "version": "1.0.0.1",
+    "name": "Ged-Navigation-solution",
+    "id": "2f47e456-7b60-428b-a348-6607b0439787",
+    "version": "1.0.0.0",
     "includeClientSideAssets": true,
     "isDomainIsolated": false,
     "developer": {
@@ -29,6 +29,6 @@
     ]
   },
   "paths": {
-    "zippedPackage": "solution/MyAircalin-Navigation.sppkg"
+    "zippedPackage": "solution/GED-Navigation.sppkg"
   }
 }

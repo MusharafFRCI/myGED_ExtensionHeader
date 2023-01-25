@@ -3,7 +3,7 @@
     <CustomAction
         Title="HeaderApp"
         Location="ClientSideExtension.ApplicationCustomizer"
-        ClientSideComponentId="ed8cf08b-fdd2-45fd-8a20-38792436e363"
+        ClientSideComponentId="ed8cf08b-fdd2-45fd-8a20-38792436e364"
         ClientSideComponentProperties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
     </CustomAction>
 </Elements>

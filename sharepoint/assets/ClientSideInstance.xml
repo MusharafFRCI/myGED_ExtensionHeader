@@ -3,7 +3,7 @@
     <ClientSideComponentInstance
         Title="HeaderApp"
         Location="ClientSideExtension.ApplicationCustomizer"
-        ComponentId="ed8cf08b-fdd2-45fd-8a20-38792436e363"
+        ComponentId="ed8cf08b-fdd2-45fd-8a20-38792436e364"
         Properties="{&quot;testMessage&quot;:&quot;Test message&quot;}">
     </ClientSideComponentInstance>
 </Elements>

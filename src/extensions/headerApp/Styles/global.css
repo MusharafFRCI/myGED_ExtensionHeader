@@ -80,7 +80,7 @@ body {
 }
 
 .link-header a {
-    color: #fff;
+    color: white;
     font-weight: 300;
     font-size: .875rem;
     letter-spacing: 1px;
@@ -88,6 +88,7 @@ body {
 
 .link-header .text {
     margin-left: 15px;
+    color: white;
 }
 
 .top-section:before {

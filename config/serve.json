@@ -6,7 +6,7 @@
     "default": {
       "pageUrl": "https://frcidevtest.sharepoint.com/sites/MyAirCalin",
       "customActions": {
-        "ed8cf08b-fdd2-45fd-8a20-38792436e363": {
+        "ed8cf08b-fdd2-45fd-8a20-38792436e364": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
             "testMessage": "Test message"
@@ -17,7 +17,7 @@
     "headerApp": {
       "pageUrl": "https://frcidevtest.sharepoint.com/sites/MyAirCalin",
       "customActions": {
-        "ed8cf08b-fdd2-45fd-8a20-38792436e363": {
+        "ed8cf08b-fdd2-45fd-8a20-38792436e364": {
           "location": "ClientSideExtension.ApplicationCustomizer",
           "properties": {
             "testMessage": "Test message"
