@@ -141,91 +141,89 @@ export default class HeaderAppApplicationCustomizer
                                 <nav>
                                     <ul class="flex-basic flex-align-center flex-justify-center">
                                         <li>
-                                        <div >
-                                        <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Page-D'accueil.aspx" class="flex-basic-n flex-align-center">
-                                
-                
-                                        <div class="text">
-                                            Accueil
-                                        </div>
-                                    </a> </div>
-                                     
+                                            <div>
+                                                <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Page-D'accueil.aspx" class="flex-basic-n flex-align-center">
+                                                    <div class="text">
+                                                        Accueil
+                                                    </div>
+                                                </a> 
+                                            </div> 
                                         </li>
                 
                                         <li>
-                                             <div class="dropdown">
-                                            <button class="dropbtn">Choisissez un département</button>
-                                            <div class="dropdown-content">
-                                              <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=615">DG</a>
-                                              <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=3">DSC</a>
-                                              <!--    <a href="#">DE</a>
-                                              <a href="#">DO</a>
-                                              <a href="#">DT</a>
-                                             <a href="#">CGO</a>
-                                              <a href="#">SURETE</a>
-                                              <a href="#">CRISE</a>
-                                              <a href="#">AI</a>
-                                              <a href="#">CG</a>
-                                              <a href="#">DCM</a>
-                                              <a href="#">CGO</a> -->
+                                            <div class="dropdown">
+                                                <button class="dropbtn">Choisissez un département</button>
+                                                <div class="dropdown-content">
+                                                    <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=615">DG</a>
+                                                    <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=3">DSC</a>
+                                                    <!--    <a href="#">DE</a>
+                                                    <a href="#">DO</a>
+                                                    <a href="#">DT</a>
+                                                    <a href="#">CGO</a>
+                                                    <a href="#">SURETE</a>
+                                                    <a href="#">CRISE</a>
+                                                    <a href="#">AI</a>
+                                                    <a href="#">CG</a>
+                                                    <a href="#">DCM</a>
+                                                    <a href="#">CGO</a> -->
+                                                </div>
                                             </div>
-                                          </div>
-                                                                                      
-                                
                                         </li>
-                
-                                        <li>
-                                        <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
-                                          
-                                                <div class="text">
-                                                Marque-pages
-                                                </div>
-                                                </a>
-                                        </li>
-                
-                                        <li>
-                                            <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=1" class="flex-basic-n flex-align-center">
-                                          
-                
-                                                <div class="text">
-                                                Documentation
-                                                </div>
-                                            </a>
-                                        </li>
-                
                 
                                         <li>
                                             <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
                                                 <div class="icn">
-                                                    <img src="${require<string>('./images/icn-menu6.png')}" alt="">
+                                                    <img src="${require<string>('./images/icn-bookmark.png')}" alt="">
                                                 </div>
-                
                                                 <div class="text">
-                                                    Webmail
+                                                    Marque-pages
+                                                </div>
+                                            </a>
+                                        </li>
+                
+                                        <li>
+                                            <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=1" class="flex-basic-n flex-align-center">
+                                                <div class="icn">
+                                                    <img src="${require<string>('./images/icn-document.png')}" alt="">
+                                                </div>
+                                                <div class="text">
+                                                    Documentation
+                                                </div>   
+                                            </a>
+                                        </li>
+                
+                                        <li>
+                                            <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
+                                                <div class="icn">
+                                                    <img src="${require<string>('./images/icn-outlook.png')}" alt="">
+                                                </div>
+                                                <div class="text">
+                                                    Outlook
                                                 </div>
                                             </a>
                                         </li>
                 
                                         <li>
                                             <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
-                                            <div class="icn">
-                                            <img src="${require<string>('./images/icn-menu1.png')}" alt="">
-                                        </div>
-                
+                                                <div class="icn">
+                                                    <img src="${require<string>('./images/icn-home.png')}" alt="">
+                                                </div>
                                                 <div class="text">
-                                                   Intranet
+                                                    Intranet
                                                 </div>
                                             </a>
                                         </li>
 
                                         <li>
-                                        <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
-                                  
-                                            <div class="text">
-                                               Administration
-                                            </div>
-                                        </a>
-                                    </li>
+                                            <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
+                                                <div class="icn">
+                                                    <img src="${require<string>('./images/icn-settings.png')}" alt="">
+                                                </div>
+                                                <div class="text">
+                                                Administration
+                                                </div>
+                                            </a>
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>

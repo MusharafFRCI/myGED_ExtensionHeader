@@ -62,8 +62,8 @@ body {
 }
 
 .link-header {
-    background: #004A8E;
-    padding: 15px 0;
+    background: #004a8e;
+    padding: 0px !important;
 }
 
 .link-header li {
@@ -89,6 +89,10 @@ body {
 .link-header .text {
     margin-left: 15px;
     color: white;
+}
+
+.link-header a:hover{
+    background-color: #004689;
 }
 
 .top-section:before {
