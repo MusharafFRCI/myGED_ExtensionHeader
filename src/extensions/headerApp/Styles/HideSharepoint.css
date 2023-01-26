@@ -1,13 +1,13 @@
 /* hide sharepoints */
-#spSiteHeader{
+#spSiteHeader {
     display: none;
 }
 
-#visibleContent{
-    display:none ;
+#visibleContent {
+    display: none;
 }
 
-.root-42{
+.root-42 {
     display: none;
 }
 
@@ -22,6 +22,7 @@
 .el_q_ada2ac09 {
     display: none;
 }
+
 /* 
 .webPartContainer{
     display: none;
@@ -41,37 +42,69 @@
     display: none;
 }
 
-.dropbtn {
-    background-color: #004a8e;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
+.acceuilbtn {
+    background-color: #f54630;
+    color: #fff;
+    padding: 15px 5px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
     border: none;
-  }
-  
-  .dropdown {
+}
+
+.menubtn {
+    background-color: #004a8b;
+    color: #fff;
+    padding: 15px 5px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.menubtn:hover {
+    background-color: #0064bc;
+}
+
+.dropbtn {
+    background-color: #004a8b;
+    color: #fff;
+    padding: 15px 5px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+}
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #d8d8d8;
+    background-color: #ffb438;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px #004a8e;
     z-index: 47;
-  }
-  
-  .dropdown-content a {
+}
+
+.dropdown-content a {
     color: #000000;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
-  
-  .dropdown-content a:hover {background-color: #afafaf;}
-  
-  .dropdown:hover .dropdown-content {display: block;}
-  
-  .dropdown:hover .dropbtn {background-color: #004689;}
+}
+
+.dropdown-content a:hover {
+    background-color: #00b0e6;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #0064bc;
+}

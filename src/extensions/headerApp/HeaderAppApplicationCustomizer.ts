@@ -142,11 +142,16 @@ export default class HeaderAppApplicationCustomizer
                                     <ul class="flex-basic flex-align-center flex-justify-center">
                                         <li>
                                             <div>
-                                                <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Page-D'accueil.aspx" class="flex-basic-n flex-align-center">
-                                                    <div class="text">
-                                                        Accueil
-                                                    </div>
-                                                </a> 
+                                                <div class="acceuilbtn">
+                                                    <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Page-D'accueil.aspx" class="flex-basic-n flex-align-center">
+                                                        <div class="icn">
+                                                            <img src="${require<string>('./images/icn-home.png')}" alt="">
+                                                        </div>
+                                                        <div class="text">
+                                                            Accueil
+                                                        </div>
+                                                    </a>
+                                                </div>     
                                             </div> 
                                         </li>
                 
@@ -171,58 +176,68 @@ export default class HeaderAppApplicationCustomizer
                                         </li>
                 
                                         <li>
-                                            <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
-                                                <div class="icn">
-                                                    <img src="${require<string>('./images/icn-bookmark.png')}" alt="">
-                                                </div>
-                                                <div class="text">
-                                                    Marque-pages
-                                                </div>
-                                            </a>
+                                            <div class="menubtn">
+                                                <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
+                                                    <div class="icn">
+                                                        <img src="${require<string>('./images/icn-bookmark.png')}" alt="">
+                                                    </div>
+                                                    <div class="text">
+                                                        Marque-pages
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </li>
                 
                                         <li>
-                                            <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=1" class="flex-basic-n flex-align-center">
-                                                <div class="icn">
-                                                    <img src="${require<string>('./images/icn-document.png')}" alt="">
-                                                </div>
-                                                <div class="text">
-                                                    Documentation
-                                                </div>   
-                                            </a>
+                                            <div class="menubtn">
+                                                <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=1" class="flex-basic-n flex-align-center">
+                                                    <div class="icn">
+                                                        <img src="${require<string>('./images/icn-document.png')}" alt="">
+                                                    </div>
+                                                    <div class="text">
+                                                        Documentation
+                                                    </div>   
+                                                </a>
+                                            </div>
                                         </li>
                 
                                         <li>
-                                            <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
-                                                <div class="icn">
-                                                    <img src="${require<string>('./images/icn-outlook.png')}" alt="">
-                                                </div>
-                                                <div class="text">
-                                                    Outlook
-                                                </div>
-                                            </a>
+                                            <div class="menubtn">
+                                                <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
+                                                    <div class="icn">
+                                                        <img src="${require<string>('./images/icn-outlook.png')}" alt="">
+                                                    </div>
+                                                    <div class="text">
+                                                        Outlook
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </li>
                 
                                         <li>
-                                            <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
-                                                <div class="icn">
-                                                    <img src="${require<string>('./images/icn-home.png')}" alt="">
-                                                </div>
-                                                <div class="text">
-                                                    Intranet
-                                                </div>
-                                            </a>
+                                            <div class="menubtn">
+                                                <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
+                                                    <div class="icn">
+                                                        <img src="${require<string>('./images/icn-home.png')}" alt="">
+                                                    </div>
+                                                    <div class="text">
+                                                        Intranet
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </li>
 
                                         <li>
-                                            <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
-                                                <div class="icn">
-                                                    <img src="${require<string>('./images/icn-settings.png')}" alt="">
-                                                </div>
-                                                <div class="text">
-                                                Administration
-                                                </div>
-                                            </a>
+                                            <div class="menubtn">
+                                                <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
+                                                    <div class="icn">
+                                                        <img src="${require<string>('./images/icn-settings.png')}" alt="">
+                                                    </div>
+                                                    <div class="text">
+                                                    Administration
+                                                    </div>
+                                                </a>
+                                            </div>
                                         </li>
                                     </ul>
                                 </nav>

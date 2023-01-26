@@ -91,10 +91,6 @@ body {
     color: white;
 }
 
-.link-header a:hover{
-    background-color: #004689;
-}
-
 .top-section:before {
     content: '';
     background: url('./../../headerApp/images/icn-top-right.png') no-repeat;
