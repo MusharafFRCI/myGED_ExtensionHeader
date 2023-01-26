@@ -152,7 +152,10 @@ export default class HeaderAppApplicationCustomizer
                 
                                         <li>
                                             <div class="dropdown">
-                                                <button class="dropbtn">Choisissez un département</button>
+                                                <button class="dropbtn" style="
+                                                font-weight: 300;
+                                                font-size: .875rem;
+                                                letter-spacing: 1px;">Choisissez un département</button>
                                                 <div class="dropdown-content">
                                                     <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=615">DG</a>
                                                     <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=3">DSC</a>
