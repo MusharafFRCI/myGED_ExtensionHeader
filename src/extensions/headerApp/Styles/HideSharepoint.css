@@ -52,6 +52,10 @@
     border: none;
 }
 
+.acceuilbtn:focus {
+    background-color: #f54630;
+}
+
 .menubtn {
     background-color: #004a8b;
     color: #fff;
@@ -60,6 +64,9 @@
     font-weight: 300;
     letter-spacing: 1px;
     border: none;
+}
+.menubtn:focus {
+    background-color: #f54630;
 }
 
 .menubtn:hover {

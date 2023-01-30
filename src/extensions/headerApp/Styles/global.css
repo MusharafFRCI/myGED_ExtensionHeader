@@ -84,6 +84,7 @@ body {
     font-weight: 300;
     font-size: .875rem;
     letter-spacing: 1px;
+    margin: 0 18px;
 }
 
 .link-header .text {
