@@ -7,6 +7,7 @@ import {
 } from '@microsoft/sp-application-base';
 
 import * as strings from 'HeaderAppApplicationCustomizerStrings';
+import { sp, List, IItemAddResult, UserCustomActionScope, Items, Item, Web } from "@pnp/sp/presets/all";
 
 import styles from './HeaderAppApplicationCustomizer.module.scss';
 import * as $ from 'jquery';
@@ -33,6 +34,7 @@ export interface IHeaderAppApplicationCustomizerProperties {
 /** A Custom Action which can be run during execution of a Client Side Application */
 export default class HeaderAppApplicationCustomizer
     extends BaseApplicationCustomizer<IHeaderAppApplicationCustomizerProperties> {
+    [x: string]: any;
 
     private _topPlaceholderHeader: PlaceholderContent | undefined;
     private _bottomPlaceholderFooter: PlaceholderContent | undefined;
@@ -49,16 +51,22 @@ export default class HeaderAppApplicationCustomizer
         //The below code is used to call render method for generating the HTML elements.  
         this._renderPlaceHoldersHeaderandFooter();
 
+        sp.setup(
+            {
+                spfxContext: this.props.context
+                //props.context   
+            });
+
         return Promise.resolve();
     }
 
     private language = navigator.language;
 
     private _renderPlaceHoldersHeaderandFooter(): void {
-        
+
         //console.log('HeaderAppApplicationCustomizer._renderPlaceHoldersHeaderandFooter()');
         //console.log('Available placeholders are as below: ',
-            //this.context.placeholderProvider.placeholderNames.map(name => PlaceholderName[name]).join(', '));
+        //this.context.placeholderProvider.placeholderNames.map(name => PlaceholderName[name]).join(', '));
 
         //Handling the top placeholder - header section
         if (!this._topPlaceholderHeader) {
@@ -157,14 +165,11 @@ export default class HeaderAppApplicationCustomizer
                 
                                         <li>
                                             <div class="dropdown">
-                                                <button class="dropbtn" style="
-                                                font-weight: 300;
-                                                font-size: .875rem;
-                                                letter-spacing: 1px;">Choisissez un département</button>
-                                                <div class="dropdown-content">
-                                                    <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=615">DG</a>
+                                                <button class="dropbtn">Choisissez un département</button>
+                                                <div class="dropdown-content" id="dropdown">
+                                                <!--<a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=615">DG</a>
                                                     <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=3">DSC</a>
-                                                    <!--    <a href="#">DE</a>
+                                                    <a href="#">DE</a>
                                                     <a href="#">DO</a>
                                                     <a href="#">DT</a>
                                                     <a href="#">CGO</a>
@@ -247,11 +252,29 @@ export default class HeaderAppApplicationCustomizer
                             </div>
                         </div>
                     </header>`;
+                    this._getdropdown();
                 }
             }
-        } 
+        }
     }
 
+
+    private async _getdropdown() {
+        let web = Web(this.context.pageContext.web.absoluteUrl);
+        const items = await web.lists.getByTitle("Department").items();
+        let htmldropdown = '';
+        const dropdown: Element = this._topPlaceholderHeader.domElement.querySelector('#dropdown');
+        items.forEach((element) => {
+            element = {
+                Title: element.Title,
+                url: element.url
+            };
+            htmldropdown += `
+            <a href="${element.url}">${element.Title}</a>
+            `;
+        });
+        dropdown.innerHTML += htmldropdown;
+    }
 
     private _onDispose(): void {
         console.log('[HeaderAndFooterAppExtensionApplicationCustomizer._onDispose] Disposed from the top header and bottom footer placeholders.');

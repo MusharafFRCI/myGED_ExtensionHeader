@@ -108,3 +108,9 @@
 .dropdown:hover .dropbtn {
     background-color: #0064bc;
 }
+
+.dropbtn {
+    font-weight: 300;
+    font-size: .875rem;
+    letter-spacing: 1px;
+}
