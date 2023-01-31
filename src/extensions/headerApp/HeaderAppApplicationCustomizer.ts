@@ -96,7 +96,7 @@ export default class HeaderAppApplicationCustomizer
                 <div class="left-header w25">
                     <div class="inner-left-header w100">
                         <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Page-D'accueil.aspx">
-                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 348.822 73.282">
+                            <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 348.822 73.282">
                                 <defs>
                                   <clipPath id="clip-path">
                                     <rect id="Rectangle_365" data-name="Rectangle 365" width="348.822" height="73.282" transform="translate(0 0)" fill="none"/>
@@ -127,7 +127,9 @@ export default class HeaderAppApplicationCustomizer
                                     <path id="Path_456" data-name="Path 456" d="M60.941,7.974c.478.827-.2,2.5-1.545,3.751-1.324,1.232-2.777,1.581-3.255.772-.478-.827.221-2.5,1.545-3.733,1.324-1.269,2.777-1.6,3.255-.791" fill="#fab811"/>
                                   </g>
                                 </g>
-                            </svg>
+                            </svg> -->
+
+                            <img src="${require<string>('./images/myGed_logo.png')}" alt="">
                         </a>
                     </div>
                 </div>
