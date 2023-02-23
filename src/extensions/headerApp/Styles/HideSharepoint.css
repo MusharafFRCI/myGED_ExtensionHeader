@@ -65,6 +65,7 @@
     letter-spacing: 1px;
     border: none;
 }
+
 .menubtn:focus {
     background-color: #f54630;
 }
@@ -118,6 +119,93 @@
 
 .dropbtn {
     font-weight: 300;
-    font-size: .875rem;
+    font-size: 14px;
     letter-spacing: 1px;
+}
+
+h100 {
+    height: 100%;
+}
+
+.w100 {
+    width: 100%;
+}
+
+.w95,
+.w100 {
+    position: relative;
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-basic,
+.flex-basic-n {
+    display: flex;
+}
+
+.flex-basic {
+    flex-wrap: wrap;
+}
+
+.cnt-95 {
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+.inner-top-header {
+    padding: 15px;
+
+}
+
+.inner-top-header .right-header a:hover .icn:before {
+    background: #00B0EA;
+}
+
+.link-header {
+    background: #004a8e;
+    padding: 0px !important;
+}
+
+.link-header li {
+    margin: 0 25px;
+    position: relative;
+}
+
+.link-header li:first-child {
+    margin-left: 0;
+}
+
+.link-header li:last-child {
+    margin-right: 0;
+}
+
+.link-header a {
+    color: white;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 0 18px;
+}
+
+.link-header .text {
+    margin-left: 15px;
+    color: white;
+    font-size: 14px;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+li,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }

@@ -8,15 +8,16 @@ import {
 
 import * as strings from 'HeaderAppApplicationCustomizerStrings';
 import { sp, List, IItemAddResult, UserCustomActionScope, Items, Item, Web } from "@pnp/sp/presets/all";
+import { SPComponentLoader } from '@microsoft/sp-loader';
 
 import styles from './HeaderAppApplicationCustomizer.module.scss';
 import * as $ from 'jquery';
 
-require("./Styles/global.css")
-require("./Styles/basic.css")
+// require("./Styles/global.css")
+// require("./Styles/basic.css")
 require("./Styles/HideSharepoint.css")
-require("./Styles/media.css")
-
+// require("./Styles/media.css")
+SPComponentLoader.loadCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 
 const LOG_SOURCE: string = 'HeaderAppApplicationCustomizer';
 
