@@ -66,6 +66,16 @@
     border: none;
 }
 
+.search {
+    background-color: #004a8b;
+    color: #fff;
+    padding: 15px 5px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+}
+
 .menubtn:focus {
     background-color: #f54630;
 }
@@ -173,7 +183,7 @@ h100 {
 }
 
 .link-header li {
-    margin: 0 25px;
+    margin: 0 19px !important;
     position: relative;
 }
 
@@ -208,4 +218,80 @@ ul {
     list-style: none;
     margin: 0;
     padding: 0;
+}
+
+[class^="simpleFooterContainer-"] {
+    display: none;
+}
+
+.od-ItemsScopeList-page .od-ItemsScopeList-content-sticky .od-ItemContent-header {
+    padding-bottom: 0.25rem;
+    height: 70px;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    will-change: transform;
+}
+
+.od-ItemContent-title {
+    font-size: 28px;
+    font-weight: 100;
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 14px;
+    padding-bottom: 25px;
+}
+
+.od-ItemContent-list {
+    box-sizing: border-box;
+    min-width: 100%;
+    flex-grow: 1;
+    padding: 0rem;
+    margin-right: auto;
+    background-clip: content-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.Search-text {
+    width: 100%;
+    position: relative;
+    display: flex;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 14px;
+    padding: 0px 45px 0px 9px;
+    background-color: #eaeaeb;
+    color: #6c6c6c;
+    border-radius: 6px;
+    border: none;
+    transition: all .4s;
+}
+
+.search-input:focus {
+    border: none;
+    outline: none;
+    box-shadow: 0 1px 12px #b8c6db;
+    -moz-box-shadow: 0 1px 12px #b8c6db;
+    -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
+
+.search-btn {
+    background-color: transparent;
+    font-size: 14px;
+    padding: 6px 9px;
+    margin-left: -45px;
+    border: none;
+    color: #6c6c6c;
+    transition: all .4s;
+    z-index: 10;
+}
+
+#O365_SearchBoxContainer_container{
+    display: none !important;
 }

@@ -18,6 +18,7 @@ import * as $ from 'jquery';
 require("./Styles/HideSharepoint.css")
 // require("./Styles/media.css")
 SPComponentLoader.loadCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
+SPComponentLoader.loadScript("https://kit.fontawesome.com/d97b87339f.js");
 
 const LOG_SOURCE: string = 'HeaderAppApplicationCustomizer';
 
@@ -201,7 +202,7 @@ export default class HeaderAppApplicationCustomizer
                 
                                         <li>
                                             <div class="menubtn">
-                                                <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=1" class="flex-basic-n flex-align-center">
+                                                <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx" class="flex-basic-n flex-align-center">
                                                     <div class="icn">
                                                         <img src="${require<string>('./images/icn-document.png')}" alt="">
                                                     </div>
@@ -227,7 +228,7 @@ export default class HeaderAppApplicationCustomizer
                 
                                         <li>
                                             <div class="menubtn">
-                                                <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
+                                                <a href="https://ncaircalin.sharepoint.com/sites/myAircalin/SitePages/Home.aspx" class="flex-basic-n flex-align-center">
                                                     <div class="icn">
                                                         <img src="${require<string>('./images/icn-home.png')}" alt="">
                                                     </div>
@@ -239,13 +240,11 @@ export default class HeaderAppApplicationCustomizer
                                         </li>
 
                                         <li>
-                                            <div class="menubtn">
+                                            <div class="search">
                                                 <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
-                                                    <div class="icn">
-                                                        <img src="${require<string>('./images/icn-settings.png')}" alt="">
-                                                    </div>
-                                                    <div class="text">
-                                                    Administration
+                                                    <div class="Search-text">
+                                                        <input type="search" class="search-input" id="myInput" placeholder="Search" aria-label="Rechercher">
+                                                        <button class="search-btn" id="btnSearch"><img src="${require<string>('./images/icn-search2.png')}" alt=""></button>
                                                     </div>
                                                 </a>
                                             </div>
@@ -256,6 +255,7 @@ export default class HeaderAppApplicationCustomizer
                         </div>
                     </header>`;
                     this._getdropdown();
+                    this.searchFilter();
                 }
             }
         }
@@ -277,6 +277,17 @@ export default class HeaderAppApplicationCustomizer
             `;
         });
         dropdown.innerHTML += htmldropdown;
+    }
+
+    private searchFilter() {
+        $("#btnSearch").on("click", search);
+        $("#myInput").on("search", search);
+        
+        function search() {
+            var searchKeywords: any = $("#myInput").val();
+            window.open("https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/RechercheDocuments.aspx?keywords=" + searchKeywords);
+        }
+        
     }
 
     private _onDispose(): void {
