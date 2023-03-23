@@ -215,7 +215,7 @@ export default class HeaderAppApplicationCustomizer
                 
                                         <li>
                                             <div class="menubtn">
-                                                <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
+                                                <a href="https://login.microsoftonline.com/common/oauth2/authorize?client_id=00000002-0000-0ff1-ce00-000000000000&redirect_uri=https%3a%2f%2foutlook.office.com%2fowa%2f&resource=00000002-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code+id_token&scope=openid&msafed=1&msaredir=1&client-request-id=3fbe46c4-eb11-7e84-0a8d-a3bb45b49b51&protectedtoken=true&claims=%7b%22id_token%22%3a%7b%22xms_cc%22%3a%7b%22values%22%3a%5b%22CP1%22%5d%7d%7d%7d&nonce=638151627370834248.a498cdd8-b724-48a1-99ac-2145cffb67e6&state=DctBFoAgCABRrddxSEEUPA5qblt2_Vj82U0MIZzucDF7grSiWLGRFMlamFhv465zLYUhxMBqCL3bBEKuc-_R5GnR3yu9n6Uf&sso_reload=true" class="flex-basic-n flex-align-center">
                                                     <div class="icn">
                                                         <img src="${require<string>('./images/icn-outlook.png')}" alt="">
                                                     </div>
