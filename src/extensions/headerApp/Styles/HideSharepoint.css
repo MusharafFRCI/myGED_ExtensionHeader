@@ -92,6 +92,7 @@
     font-weight: 300;
     letter-spacing: 1px;
     border: none;
+    display: flex;
 }
 
 .dropdown {
@@ -291,6 +292,7 @@ ul {
     transition: all .4s;
     z-index: 10;
 }
+
 
 #O365_SearchBoxContainer_container{
     display: none !important;
