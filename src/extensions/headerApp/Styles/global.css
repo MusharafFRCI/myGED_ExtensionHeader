@@ -931,6 +931,17 @@ body {
     flex-direction: column;
 }
 
+.banner {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 50rem;
+    width: 105%;
+    top: 0;
+    margin-left: -2.8rem;
+    margin-top: -2.9rem;
+    padding-top: 2%;
+}
 
 /* footer */
 
