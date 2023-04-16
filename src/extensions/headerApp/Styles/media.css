@@ -556,3 +556,54 @@
     box-sizing: border-box;
     display: none;
 }
+
+
+
+
+/* HEADER BREAKPOINT CHANGES */
+
+@media screen and (min-width: 1024px) {
+    .inner-link-header nav ul {
+        width: 100% !important; /*TO BE ADDED*/
+    }
+
+    nav {
+        margin-left: 0 !important;
+    }
+
+    .inner-link-header nav ul li {
+        width: 60%;
+        overflow: auto;
+    }
+
+    .dropdown-content {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 2px;
+        margin-top: 5px;
+        max-height: 60vh;
+        overflow-y: auto;
+    }
+
+    .dropdown-content a {
+        padding: 10px !important;
+    }
+
+    div#dropdown::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    div#sidebarMenu::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+    }
+
+
+}
+
+@media only screen and (max-width: 760px){
+    .inner-link-header nav ul li {
+        width: 75%;
+    }
+
+}
