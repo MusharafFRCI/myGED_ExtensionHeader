@@ -282,7 +282,7 @@ export default class HeaderAppApplicationCustomizer
                 url: element.url
             };
             htmldropdown += `
-            <a href="${element.url}">${element.Title}</a>
+            <a onclick='window.open("${element.url}");return false;'>${element.Title}</a>
             `;
         });
         dropdown.innerHTML += htmldropdown;
@@ -313,7 +313,7 @@ export default class HeaderAppApplicationCustomizer
                 url: element.url
             };
             htmldropdown2 += `
-            <a href="${element.url}">${element.Title}</a>
+            <a onclick='window.open("${element.url}");return false;'>${element.Title}</a>
             `;
         });
         dropdown.innerHTML += htmldropdown2;

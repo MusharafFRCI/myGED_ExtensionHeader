@@ -107,7 +107,7 @@
     background-color: #ffb438;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px #004a8e;
-    z-index: 47;
+    z-index: 150;
 }
 
 .dropdown-content a {
