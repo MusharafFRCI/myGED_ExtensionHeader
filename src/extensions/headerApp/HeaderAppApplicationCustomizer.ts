@@ -22,6 +22,8 @@ import * as $ from 'jquery';
 // require("./Styles/basic.css")
 require("./Styles/HideSharepoint.css")
 // require("./Styles/media.css")
+// require("./scripts/toggleMenu.js")
+require("./scripts/custom.js")
 SPComponentLoader.loadCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 SPComponentLoader.loadScript("https://kit.fontawesome.com/d97b87339f.js");
 
@@ -265,6 +267,11 @@ export default class HeaderAppApplicationCustomizer
                     this._getdropdown();
                     this._getdropdown2();
                     this.searchFilter();
+                    const togglebtn = document.querySelector(".hamburger");
+
+                    togglebtn.addEventListener('click', () => {
+                        document.querySelector(".link-header").classList.toggle("toggled-nav");
+                    })
                 }
             }
         }
@@ -289,20 +296,20 @@ export default class HeaderAppApplicationCustomizer
     }
 
     private async _getdropdown2() {
-         let web = Web("https://ncaircalin.sharepoint.com/sites/TestMyGed/");
-     //   let user:ISiteUserInfo  = await sp.web.currentUser();
+        let web = Web("https://ncaircalin.sharepoint.com/sites/TestMyGed/");
+        //   let user:ISiteUserInfo  = await sp.web.currentUser();
 
         const user = this.context.pageContext.user;
         let userDisplayName = user.displayName;
 
 
-        const items = await web.lists.getByTitle("Marque_Pages").items.select("ID","Title","url")
-            .filter("user eq '"+userDisplayName+"'")
+        const items = await web.lists.getByTitle("Marque_Pages").items.select("ID", "Title", "url")
+            .filter("user eq '" + userDisplayName + "'")
             .get();
 
 
-           console.log("items:", items);
-            console.log("user:", user);
+        console.log("items:", items);
+        console.log("user:", user);
 
         let htmldropdown2 = '';
         const dropdown: Element = this._topPlaceholderHeader.domElement.querySelector('#dropdown2');
