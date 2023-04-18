@@ -561,7 +561,7 @@
 
 /* HEADER BREAKPOINT CHANGES */
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .inner-link-header nav ul {
         width: 100% !important; /*TO BE ADDED*/
     }
@@ -608,3 +608,8 @@
 }
 
 
+@media only screen and (max-width: 490px){
+    .inner-link-header nav ul li {
+        width: 100%;
+    }
+}
