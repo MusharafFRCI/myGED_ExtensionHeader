@@ -8,5 +8,11 @@ $(document).ready(function() {
         $('.nav-ham .btns').toggleClass('not-open');
     });
 
+    const togglebtn = document.querySelector(".hamburger");
+
+    togglebtn.addEventListener('click', ()=>{
+        document.querySelector(".link-header").classList.toggle("toggled-nav");
+    })
+
 });
   
