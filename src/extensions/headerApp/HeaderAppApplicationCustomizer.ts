@@ -226,8 +226,8 @@ export default class HeaderAppApplicationCustomizer
                 
                                         <li>
                                             <div class="menubtn">
-                                                <!--a href="#" onclick='parent.location="${this.context.pageContext.web.absoluteUrl}/SitePages/Documentation.aspx"' class="flex-basic-n flex-align-center"-->
-                                                <a href="#" onclick='parent.location="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx"' class="flex-basic-n flex-align-center">
+                                                <a href="#" onclick='parent.location="${this.context.pageContext.web.absoluteUrl}/SitePages/Documentation.aspx"' class="flex-basic-n flex-align-center">
+                                                <!--a href="#" onclick='parent.location="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx"' class="flex-basic-n flex-align-center"-->
                                                     <div class="icn">
                                                         <img src="${require<string>('./images/icn-document.png')}" alt="">
                                                     </div>
@@ -370,6 +370,8 @@ export default class HeaderAppApplicationCustomizer
     }
 
     private searchFilter() {
+        let accueilUrl = `https://ncaircalin.sharepoint.com/sites/TestMyGed`;
+        let accueilUrl2 = `https://ncaircalin.sharepoint.com/sites/MyGed`;
         $("#btnSearch").on("click", search);
         $("#myInput").on("search", search);
         function search() {
@@ -378,7 +380,14 @@ export default class HeaderAppApplicationCustomizer
                 parent.location.href;
             }
             else if (searchKeywords !== null) {
-                window.open("https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/RechercheDocuments.aspx?keywords=" + searchKeywords);
+                if (window.location.href.match(accueilUrl)) {
+                    window.open("https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/RechercheDocuments.aspx?keywords=" + searchKeywords);
+                    console.log("TestMyGed");
+                }
+                if (window.location.href.match(accueilUrl2)) {
+                    window.open("https://ncaircalin.sharepoint.com/sites/MyGed/SitePages/RechercheDocuments.aspx?keywords=" + searchKeywords);
+                    console.log("MyGed");
+                }
             }
         }
 
