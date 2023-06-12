@@ -21,9 +21,10 @@ import * as $ from 'jquery';
 // require("./Styles/global.css")
 // require("./Styles/basic.css")
 require("./Styles/HideSharepoint.css")
-// require("./Styles/media.css")
+require("./Styles/media.css")
 // require("./scripts/toggleMenu.js")
 require("./scripts/custom.js")
+// require('./scripts/translate.js')
 SPComponentLoader.loadCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 SPComponentLoader.loadScript("https://kit.fontawesome.com/d97b87339f.js");
 
@@ -72,6 +73,19 @@ export default class HeaderAppApplicationCustomizer
     private language = navigator.language;
 
     private _renderPlaceHoldersHeaderandFooter(): void {
+        // window.addEventListener('load', function () {
+        //     try {
+        //         document.getElementById(':0.container').style.visibility = 'hidden';
+        //         document.getElementById('goog-gt-').style.visibility = 'hidden';
+        //         document.getElementById('goog-gt-').style.display = 'none';
+        //     } catch (error) {
+        //         setTimeout(() => {
+        //             document.getElementById(':0.container').style.visibility = 'hidden';
+        //             document.getElementById('goog-gt-').style.visibility = 'hidden';
+        //             document.getElementById('goog-gt-').style.display = 'none';
+        //         }, 2000);
+        //     }
+        // });
 
         //console.log('HeaderAppApplicationCustomizer._renderPlaceHoldersHeaderandFooter()');
         //console.log('Available placeholders are as below: ',
@@ -104,7 +118,7 @@ export default class HeaderAppApplicationCustomizer
             <div class="inner-top-header w100 cnt-95 flex-basic flex-align-center flex-justify-between h100">
                 <div class="left-header w25">
                     <div class="inner-left-header w100">
-                        <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Page-D'accueil.aspx">
+                        <a href="#"  onclick='parent.location="${this.context.pageContext.web.absoluteUrl}/SitePages/Home.aspx"'>
                             <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 348.822 73.282">
                                 <defs>
                                   <clipPath id="clip-path">
@@ -162,7 +176,7 @@ export default class HeaderAppApplicationCustomizer
                                         <li>
                                             <div>
                                                 <div class="acceuilbtn">
-                                                    <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Page-D'accueil.aspx" class="flex-basic-n flex-align-center">
+                                                    <a href="#" onclick='parent.location="${this.context.pageContext.web.absoluteUrl}/SitePages/Home.aspx"' class="flex-basic-n flex-align-center">
                                                         <div class="icn">
                                                             <img src="${require<string>('./images/icn-home.png')}" alt="">
                                                         </div>
@@ -212,7 +226,8 @@ export default class HeaderAppApplicationCustomizer
                 
                                         <li>
                                             <div class="menubtn">
-                                                <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx" class="flex-basic-n flex-align-center">
+                                                <!--a href="#" onclick='parent.location="${this.context.pageContext.web.absoluteUrl}/SitePages/Documentation.aspx"' class="flex-basic-n flex-align-center"-->
+                                                <a href="#" onclick='parent.location="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx"' class="flex-basic-n flex-align-center">
                                                     <div class="icn">
                                                         <img src="${require<string>('./images/icn-document.png')}" alt="">
                                                     </div>
@@ -250,6 +265,19 @@ export default class HeaderAppApplicationCustomizer
                                         </li>
 
                                         <li>
+                                            <div class="menubtn">
+                                                <a class="flex-basic-n flex-align-center" onclick='window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/MyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=udS92L");return false;'>
+                                                    <div class="icn">
+                                                        <img src="${require<string>('./images/icn_FAQ.png')}" alt="">
+                                                    </div>
+                                                    <div class="text">
+                                                        FAQ
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </li>
+
+                                        <li>
                                             <div class="search">
                                                 <a href="javascript:void(0)" class="flex-basic-n flex-align-center">
                                                     <div class="Search-text">
@@ -259,6 +287,21 @@ export default class HeaderAppApplicationCustomizer
                                                 </a>
                                             </div>
                                         </li>
+                                        <!--li>                                      
+                                            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                                            <div class="ct-topbar">
+                                                <div class="containerLang">
+                                                    <ul class="list-unstyled list-inline ct-topbar__list">
+                                                        <li class="ct-language">Language <span aria-hidden="true" style="color: rgb(155, 155, 155);">▼</span>
+                                                            <ul class="list-unstyled ct-language__dropdown">
+                                                                <li><a href="#googtrans(en|fr)" class="lang-es lang-select" data-lang="fr">Français</a></li>
+                                                                <li><a href="#googtrans(fr|en)" class="lang-en lang-select" data-lang="en">Anglais</a></li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li-->
                                     </ul>
                                 </nav>
                             </div>
@@ -267,11 +310,11 @@ export default class HeaderAppApplicationCustomizer
                     this._getdropdown();
                     this._getdropdown2();
                     this.searchFilter();
-                    const togglebtn = document.querySelector(".hamburger");
+                    // const togglebtn = document.querySelector(".hamburger");
 
-                    togglebtn.addEventListener('click', () => {
-                        document.querySelector(".link-header").classList.toggle("toggled-nav");
-                    })
+                    // togglebtn.addEventListener('click', () => {
+                    //     document.querySelector(".link-header").classList.toggle("toggled-nav");
+                    // })
                 }
             }
         }
@@ -289,14 +332,14 @@ export default class HeaderAppApplicationCustomizer
                 url: element.url
             };
             htmldropdown += `
-            <a onclick='window.open("${element.url}");return false;'>${element.Title}</a>
+            <a onclick='parent.location="${element.url}"'>${element.Title}</a>
             `;
         });
         dropdown.innerHTML += htmldropdown;
     }
 
     private async _getdropdown2() {
-        let web = Web("https://ncaircalin.sharepoint.com/sites/TestMyGed/");
+        let web = Web(this.context.pageContext.web.absoluteUrl);
         //   let user:ISiteUserInfo  = await sp.web.currentUser();
 
         const user = this.context.pageContext.user;
@@ -329,10 +372,14 @@ export default class HeaderAppApplicationCustomizer
     private searchFilter() {
         $("#btnSearch").on("click", search);
         $("#myInput").on("search", search);
-
         function search() {
             var searchKeywords: any = $("#myInput").val();
-            window.open("https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/RechercheDocuments.aspx?keywords=" + searchKeywords);
+            if (searchKeywords == null) {
+                parent.location.href;
+            }
+            else if (searchKeywords !== null) {
+                window.open("https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/RechercheDocuments.aspx?keywords=" + searchKeywords);
+            }
         }
 
     }

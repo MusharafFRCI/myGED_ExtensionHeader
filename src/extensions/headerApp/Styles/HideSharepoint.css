@@ -291,7 +291,6 @@ ul {
     border: none;
     color: #6c6c6c;
     transition: all .4s;
-    z-index: 10;
 }
 
 
@@ -338,4 +337,129 @@ a:focus, a:hover{
     transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
     border-radius: 4px;
     pointer-events: none;
+}
+
+/*google translate widget customisation*/
+.VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    color: white !important;
+}
+
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+.goog-te-gadget-icon {
+    display: none;
+}
+
+.goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
+    text-decoration: none;
+    color: white;
+}
+
+.goog-te-gadget-simple {
+    background-color: #004A8E !important;
+    border-left: #004A8E !important;
+    border-top: #004A8E !important;
+    border-bottom: #004A8E !important;
+    border-right: #004A8E !important;
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background: none !important;
+    box-shadow: none !important;
+}
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0px !important;
+}
+
+
+/*Custom html css for google translate*/
+
+
+.ct-topbar__list {
+    margin-bottom: 0px;
+}
+
+.ct-language__dropdown {
+    padding-top: 8px;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 110%;
+    left: -3px;
+    -webkit-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    width: 100px;
+    text-align: center;
+    padding-top: 0;
+    z-index: 200;
+}
+
+.ct-language__dropdown li {
+    background: #004A8E;
+    padding: 5px;
+}
+
+.ct-language__dropdown li a {
+    display: block;
+}
+
+.ct-language__dropdown li:first-child {
+    padding-top: 10px;
+    border-radius: 3px 3px 0 0;
+    margin: 0 0 !important;
+}
+
+.ct-language__dropdown li:last-child {
+    padding-bottom: 5px;
+    border-radius: 3px 0px 3px 0px;
+    margin: 0 0 !important;
+}
+
+.ct-language__dropdown li:hover {
+    background: #00aced;
+}
+
+.ct-language__dropdown:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 8px;
+    height: 0;
+    border: 0 solid transparent;
+    border-right-width: 8px;
+    border-left-width: 8px;
+    border-bottom: 8px solid #004A8E;
+}
+
+.ct-language {
+    position: relative;
+    background: #004A8E;
+    color: #fff;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.ct-language:hover .ct-language__dropdown {
+    max-height: 200px;
+    padding-top: 8px;
+}
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none;
 }
