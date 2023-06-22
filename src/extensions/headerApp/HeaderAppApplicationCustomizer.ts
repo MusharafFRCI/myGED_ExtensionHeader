@@ -24,7 +24,7 @@ require("./Styles/HideSharepoint.css")
 require("./Styles/media.css")
 // require("./scripts/toggleMenu.js")
 require("./scripts/custom.js")
-// require('./scripts/translate.js')
+require('./scripts/translate.js')
 SPComponentLoader.loadCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 SPComponentLoader.loadScript("https://kit.fontawesome.com/d97b87339f.js");
 
@@ -87,8 +87,8 @@ export default class HeaderAppApplicationCustomizer
         //     }
         // });
 
-        //console.log('HeaderAppApplicationCustomizer._renderPlaceHoldersHeaderandFooter()');
-        //console.log('Available placeholders are as below: ',
+        // console.log('HeaderAppApplicationCustomizer._renderPlaceHoldersHeaderandFooter()');
+        // console.log('Available placeholders are as below: ',
         //this.context.placeholderProvider.placeholderNames.map(name => PlaceholderName[name]).join(', '));
 
         //Handling the top placeholder - header section
@@ -172,7 +172,7 @@ export default class HeaderAppApplicationCustomizer
             <div class="link-header od-ItemsScopeItemContent w100">
                             <div class="inner-link-header w100 cnt-90">
                                 <nav>
-                                    <ul class="flex-basic flex-align-center flex-justify-center">
+                                    <ul class="flex-basic flex-align-center flex-justify-center flexing">
                                         <li>
                                             <div>
                                                 <div class="acceuilbtn">
@@ -214,7 +214,7 @@ export default class HeaderAppApplicationCustomizer
                                                     <div class="icn">    
                                                         <img src="${require<string>('./images/icn-bookmark.png')}" alt="">
                                                     </div>
-                                                    <div class="text" style="margin-top: 6px;">
+                                                    <div class="text" style="margin-top: 2px;">
                                                         Marque-pages
                                                     </div>
                                                 </button>
@@ -252,7 +252,7 @@ export default class HeaderAppApplicationCustomizer
                                         </li>
                 
                                         <li>
-                                            <div class="menubtn">
+                                            <div title="MyAircalin" class="menubtn">
                                                 <a class="flex-basic-n flex-align-center" onclick='window.open("https://ncaircalin.sharepoint.com/sites/myAircalin/SitePages/Home.aspx");return false;'>
                                                     <div class="icn">
                                                         <img src="${require<string>('./images/icn-home.png')}" alt="">
@@ -265,8 +265,8 @@ export default class HeaderAppApplicationCustomizer
                                         </li>
 
                                         <li>
-                                            <div class="menubtn">
-                                                <a class="flex-basic-n flex-align-center" onclick='window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/MyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=udS92L");return false;'>
+                                            <div class="menubtn" id="FAQ">
+                                                <a class="flex-basic-n flex-align-center">
                                                     <div class="icn">
                                                         <img src="${require<string>('./images/icn_FAQ.png')}" alt="">
                                                     </div>
@@ -287,21 +287,21 @@ export default class HeaderAppApplicationCustomizer
                                                 </a>
                                             </div>
                                         </li>
-                                        <!--li>                                      
+                                        <li>                                      
                                             <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                                             <div class="ct-topbar">
                                                 <div class="containerLang">
                                                     <ul class="list-unstyled list-inline ct-topbar__list">
                                                         <li class="ct-language">Language <span aria-hidden="true" style="color: rgb(155, 155, 155);">▼</span>
                                                             <ul class="list-unstyled ct-language__dropdown">
-                                                                <li><a href="#googtrans(en|fr)" class="lang-es lang-select" data-lang="fr">Français</a></li>
-                                                                <li><a href="#googtrans(fr|en)" class="lang-en lang-select" data-lang="en">Anglais</a></li>
+                                                                <li><a href="#googtrans(en|fr)" id="french" class="lang-es lang-select" data-lang="fr">Français</a></li>
+                                                                <li><a href="#googtrans(fr|en)" id="english" class="lang-en lang-select" data-lang="en">Anglais</a></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
-                                        </li-->
+                                        </li>
                                     </ul>
                                 </nav>
                             </div>
@@ -310,6 +310,7 @@ export default class HeaderAppApplicationCustomizer
                     this._getdropdown();
                     this._getdropdown2();
                     this.searchFilter();
+                    this.FAQ();
                     // const togglebtn = document.querySelector(".hamburger");
 
                     // togglebtn.addEventListener('click', () => {
@@ -351,8 +352,8 @@ export default class HeaderAppApplicationCustomizer
             .get();
 
 
-        console.log("items:", items);
-        console.log("user:", user);
+        // // console.log("items:", items);
+        // // console.log("user:", user);
 
         let htmldropdown2 = '';
         const dropdown: Element = this._topPlaceholderHeader.domElement.querySelector('#dropdown2');
@@ -382,12 +383,29 @@ export default class HeaderAppApplicationCustomizer
             else if (searchKeywords !== null) {
                 if (window.location.href.match(accueilUrl)) {
                     window.open("https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/RechercheDocuments.aspx?keywords=" + searchKeywords);
-                    console.log("TestMyGed");
+                    // console.log("TestMyGed");
                 }
                 if (window.location.href.match(accueilUrl2)) {
                     window.open("https://ncaircalin.sharepoint.com/sites/MyGed/SitePages/RechercheDocuments.aspx?keywords=" + searchKeywords);
-                    console.log("MyGed");
+                    // console.log("MyGed");
                 }
+            }
+        }
+
+    }
+
+    private FAQ() {
+        let accueilUrl2 = `https://ncaircalin.sharepoint.com/sites/TestMyGed`;
+        let accueilUrl = `https://ncaircalin.sharepoint.com/sites/MyGed`;
+        $('#FAQ').on("click", faqtrigger);
+        function faqtrigger() {
+            if (window.location.href.match(accueilUrl)) {
+                window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/MyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=udS92L");
+                // console.log("MyGedFAQ");
+            }
+            if (window.location.href.match(accueilUrl2)) {
+                window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/TestMyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=3gTRVh");
+                // console.log("TestMyGedFAQ");
             }
         }
 

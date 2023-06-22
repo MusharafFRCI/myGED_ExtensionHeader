@@ -83,6 +83,7 @@
 .menubtn:hover {
     background-color: #0064bc;
     padding: 15px 5px;
+    cursor: pointer;
 }
 
 .dropbtn {
@@ -165,6 +166,12 @@ h100 {
     flex-wrap: wrap;
 }
 
+.flexing {
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+}
+
 .cnt-95 {
     max-width: 95%;
     margin: 0 auto;
@@ -185,7 +192,7 @@ h100 {
 }
 
 .link-header li {
-    margin: 0 19px !important;
+    margin: 0 12px!important;
     position: relative;
 }
 
