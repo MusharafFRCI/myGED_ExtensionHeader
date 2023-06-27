@@ -198,6 +198,12 @@
         padding: 15px 0;
     }
 
+    .flexing {
+        display: flex;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+
     .link-header.open .inner-link-header {
         display: block;
     }
@@ -506,6 +512,12 @@
 
     .planete-repeated .content-hidden .time {
         font-size: 3.175rem;
+    }
+
+    .flexing {
+        display: flex;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
     }
 
     .nav-ham span {

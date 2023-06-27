@@ -21,16 +21,16 @@ $(function () {
       globalExportsName: 'google'
     });
   }
-  function triggerHtmlEvent(element, eventName) {
-    var event;
-    if (typeof (Event) === 'function') {
-      event = new Event(eventName, { bubbles: true, cancelable: true });
-    } else {
-      event = document.createEvent('HTMLEvents');
-      event.initEvent(eventName, true, true);
-    }
-    element.dispatchEvent(event);
-  }
+  // function triggerHtmlEvent(element, eventName) {
+  //   var event;
+  //   if (typeof (Event) === 'function') {
+  //     event = new Event(eventName, { bubbles: true, cancelable: true });
+  //   } else {
+  //     event = document.createEvent('HTMLEvents');
+  //     event.initEvent(eventName, true, true);
+  //   }
+  //   element.dispatchEvent(event);
+  // }
   $('.lang-select').on('click', function () {
     var theLang = $(this).attr('data-lang');
     $('.goog-te-combo').val(theLang);
@@ -38,14 +38,14 @@ $(function () {
     location.reload();
   });
   function googleTranslateElementInit() {
-    new google.translate.TranslateElement({ pageLanguage: 'fr' }, 'google_translate_element');
+    // new google.translate.TranslateElement({ pageLanguage: 'fr' }, 'google_translate_element');
     const script = document.createElement('script');
     script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     document.head.appendChild(script);
     // Create a container for the translation widget
     const container = document.createElement('div');
     container.id = 'google_translate_element';
-    this.domElement.appendChild(container);
+    // this.domElement.appendChild(container);
   }
   function translateBUtt() {
     var buttonfrench = document.getElementById('french');
@@ -90,7 +90,7 @@ $(function () {
   translateBUtt();
   appendGoogTransToUrl();
   onInit();
-  triggerHtmlEvent();
+  // triggerHtmlEvent();
   googleTranslateElementInit();
 })
 window.addEventListener('load', function () {
