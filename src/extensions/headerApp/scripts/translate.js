@@ -7,7 +7,7 @@ $(function () {
     if (currentUrl.indexOf("#googtrans") === -1) {
       // Append the string to the URL
       var newUrl = currentUrl + "#googtrans(en|fr)";
-  
+
       // Load the new URL
       window.location.href = newUrl;
     }
@@ -40,6 +40,7 @@ $(function () {
   function googleTranslateElementInit() {
     // new google.translate.TranslateElement({ pageLanguage: 'fr' }, 'google_translate_element');
     const script = document.createElement('script');
+    script.type = "text/javascript";
     script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
     document.head.appendChild(script);
     // Create a container for the translation widget
@@ -50,17 +51,17 @@ $(function () {
   function translateBUtt() {
     var buttonfrench = document.getElementById('french');
     var buttonenglish = document.getElementById('english');
-  
-    buttonfrench.addEventListener('click', function() {
+
+    buttonfrench.addEventListener('click', function () {
       var currentUrl = window.location.href;
-  
+
       if (currentUrl.indexOf("#googtrans(en|fr)") === 1) {
-  
-      var newUrl = currentUrl;
-  
-      window.location.href = newUrl;
+
+        var newUrl = currentUrl;
+
+        window.location.href = newUrl;
       }
-  
+
       else if (currentUrl.indexOf("#googtrans(fr|en)") === 1) {
         // Append the string to the URL        
         var newUrl = currentUrl.replace('#googtrans(fr|en)', '#googtrans(en|fr)');
@@ -68,17 +69,17 @@ $(function () {
         window.location.href = newUrl;
       }
     });
-  
-    buttonenglish.addEventListener('click', function() {
+
+    buttonenglish.addEventListener('click', function () {
       var currentUrl = window.location.href;
-  
+
       if (currentUrl.indexOf("#googtrans(fr|en)") === 1) {
-  
-      var newUrl = currentUrl;
-  
-      window.location.href = newUrl;
+
+        var newUrl = currentUrl;
+
+        window.location.href = newUrl;
       }
-  
+
       else if (currentUrl.indexOf("#googtrans(en|fr)") === 1) {
         // Append the string to the URL        
         var newUrl = currentUrl.replace('#googtrans(en|fr)', '#googtrans(fr|en)');

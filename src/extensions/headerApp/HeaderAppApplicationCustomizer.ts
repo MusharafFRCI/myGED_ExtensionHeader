@@ -190,7 +190,8 @@ export default class HeaderAppApplicationCustomizer
                 
                                         <li>
                                             <div class="dropdown">
-                                                <button class="dropbtn">Choisissez un département</button>
+                                                <!--button class="dropbtn">Choisissez un département</button-->
+                                                <button class="dropbtn">Département</button>
                                                 <div class="dropdown-content" id="dropdown">
                                                 <!--<a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=615">DG</a>
                                                     <a href="https://ncaircalin.sharepoint.com/sites/TestMyGed/SitePages/Home.aspx?folder=3">DSC</a>
@@ -265,7 +266,7 @@ export default class HeaderAppApplicationCustomizer
                                         </li>
 
                                         <li>
-                                            <div class="menubtn" id="FAQ">
+                                            <!--div class="menubtn" id="FAQ">
                                                 <a class="flex-basic-n flex-align-center">
                                                     <div class="icn">
                                                         <img src="${require<string>('./images/icn_FAQ.png')}" alt="">
@@ -274,6 +275,21 @@ export default class HeaderAppApplicationCustomizer
                                                         FAQ
                                                     </div>
                                                 </a>
+                                            </div-->
+
+                                            <div class="dropdown">
+                                                <button class="dropbtn">
+                                                    <div class="icn">    
+                                                        <img src="${require<string>('./images/icn_FAQ.png')}" alt="">
+                                                    </div>
+                                                    <div class="text" style="margin-top: 2px;">
+                                                        FAQ
+                                                    </div>
+                                                </button>
+                                                <div class="dropdown-content" id="FAQ">
+                                                    <a id="FAQFR">Français</a>
+                                                    <a id="FAQEN">Anglais</a>
+                                                </div>
                                             </div>
                                         </li>
 
@@ -397,15 +413,27 @@ export default class HeaderAppApplicationCustomizer
     private FAQ() {
         let accueilUrl2 = `https://ncaircalin.sharepoint.com/sites/TestMyGed`;
         let accueilUrl = `https://ncaircalin.sharepoint.com/sites/MyGed`;
-        $('#FAQ').on("click", faqtrigger);
+        $('#FAQEN').on("click", faqtrigger);
         function faqtrigger() {
             if (window.location.href.match(accueilUrl)) {
                 window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/MyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=udS92L");
-                // console.log("MyGedFAQ");
+                console.log("MyGedFAQen");
             }
             if (window.location.href.match(accueilUrl2)) {
                 window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/TestMyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=3gTRVh");
-                // console.log("TestMyGedFAQ");
+                console.log("TestMyGedFAQen");
+            }
+        }
+
+        $('#FAQFR').on("click", faqfrtrigger);
+        function faqfrtrigger() {
+            if (window.location.href.match(accueilUrl)) {
+                window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/MyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=udS92L");
+                console.log("MyGedFAQfr");
+            }
+            if (window.location.href.match(accueilUrl2)) {
+                window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/TestMyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=3gTRVh");
+                console.log("TestMyGedFAQfr");
             }
         }
 
