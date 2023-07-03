@@ -416,11 +416,11 @@ export default class HeaderAppApplicationCustomizer
         $('#FAQEN').on("click", faqtrigger);
         function faqtrigger() {
             if (window.location.href.match(accueilUrl)) {
-                window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/MyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=udS92L");
+                window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/MyGed/FAQ/MyGED%20-%20QuickGuide_EV1.pdf?csf=1&web=1&e=yVB3mu");
                 console.log("MyGedFAQen");
             }
             if (window.location.href.match(accueilUrl2)) {
-                window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/TestMyGed/FAQ/MyGED%20-%20QuickGuide.pdf?csf=1&web=1&e=3gTRVh");
+                window.open("https://ncaircalin.sharepoint.com/:b:/r/sites/TestMyGed/FAQ/MyGED%20-%20QuickGuide_EV1.pdf?csf=1&web=1&e=0nSs5D");
                 console.log("TestMyGedFAQen");
             }
         }
