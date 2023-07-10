@@ -24,7 +24,7 @@ require("./Styles/HideSharepoint.css")
 require("./Styles/media.css")
 // require("./scripts/toggleMenu.js")
 require("./scripts/custom.js")
-require('./scripts/translate.js')
+// require('./scripts/translate.js')
 SPComponentLoader.loadCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 SPComponentLoader.loadScript("https://kit.fontawesome.com/d97b87339f.js");
 
@@ -172,7 +172,8 @@ export default class HeaderAppApplicationCustomizer
             <div class="link-header od-ItemsScopeItemContent w100">
                             <div class="inner-link-header w100 cnt-90">
                                 <nav>
-                                    <ul class="flex-basic flex-align-center flex-justify-center flexing">
+                                    <!--ul class="flex-basic flex-align-center flex-justify-center flexing"-->
+                                    <ul class="flex-basic flex-align-center flex-justify-center">
                                         <li>
                                             <div>
                                                 <div class="acceuilbtn">
@@ -215,7 +216,7 @@ export default class HeaderAppApplicationCustomizer
                                                     <div class="icn">    
                                                         <img src="${require<string>('./images/icn-bookmark.png')}" alt="">
                                                     </div>
-                                                    <div class="text" style="margin-top: 2px;">
+                                                    <div class="text" style="margin-top: 6%;">
                                                         Marque-pages
                                                     </div>
                                                 </button>
@@ -256,7 +257,7 @@ export default class HeaderAppApplicationCustomizer
                                             <div title="MyAircalin" class="menubtn">
                                                 <a class="flex-basic-n flex-align-center" onclick='window.open("https://ncaircalin.sharepoint.com/sites/myAircalin/SitePages/Home.aspx");return false;'>
                                                     <div class="icn">
-                                                        <img src="${require<string>('./images/icn-home.png')}" alt="">
+                                                        <img src="${require<string>('./images/icn_menu22.png')}" alt="">
                                                     </div>
                                                     <div class="text">
                                                         Intranet
@@ -282,7 +283,7 @@ export default class HeaderAppApplicationCustomizer
                                                     <div class="icn">    
                                                         <img src="${require<string>('./images/icn_FAQ.png')}" alt="">
                                                     </div>
-                                                    <div class="text" style="margin-top: 2px;">
+                                                    <div class="text" style="margin-top: 6%;">
                                                         FAQ
                                                     </div>
                                                 </button>
@@ -303,7 +304,7 @@ export default class HeaderAppApplicationCustomizer
                                                 </a>
                                             </div>
                                         </li>
-                                        <li>                                      
+                                        <!--li>                                      
                                             <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                                             <div class="ct-topbar">
                                                 <div class="containerLang">
@@ -317,7 +318,7 @@ export default class HeaderAppApplicationCustomizer
                                                     </ul>
                                                 </div>
                                             </div>
-                                        </li>
+                                        </li-->
                                     </ul>
                                 </nav>
                             </div>

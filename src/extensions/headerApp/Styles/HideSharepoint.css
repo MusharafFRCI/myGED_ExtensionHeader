@@ -172,6 +172,24 @@ h100 {
     flex-wrap: nowrap !important;
 }
 
+.dropdwn{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.drop{
+    background-color: #004a8b;
+    color: #fff;
+    padding: 15px 5px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    border: none;
+    display: flex;
+    padding-left: 15px;
+}
+
 .cnt-95 {
     max-width: 95%;
     margin: 0 auto;
