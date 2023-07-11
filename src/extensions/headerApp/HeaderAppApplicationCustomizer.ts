@@ -216,7 +216,7 @@ export default class HeaderAppApplicationCustomizer
                                                     <div class="icn">    
                                                         <img src="${require<string>('./images/icn-bookmark.png')}" alt="">
                                                     </div>
-                                                    <div class="text" style="margin-top: 6%;">
+                                                    <div class="text" id="margin">
                                                         Marque-pages
                                                     </div>
                                                 </button>
@@ -260,7 +260,7 @@ export default class HeaderAppApplicationCustomizer
                                                         <img src="${require<string>('./images/icn_menu22.png')}" alt="">
                                                     </div>
                                                     <div class="text">
-                                                        Intranet
+                                                        MyAircalin
                                                     </div>
                                                 </a>
                                             </div>
@@ -283,7 +283,7 @@ export default class HeaderAppApplicationCustomizer
                                                     <div class="icn">    
                                                         <img src="${require<string>('./images/icn_FAQ.png')}" alt="">
                                                     </div>
-                                                    <div class="text" style="margin-top: 6%;">
+                                                    <div class="text" id="margin">
                                                         FAQ
                                                     </div>
                                                 </button>

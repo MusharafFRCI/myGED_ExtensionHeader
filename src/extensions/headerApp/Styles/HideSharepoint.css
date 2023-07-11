@@ -172,13 +172,17 @@ h100 {
     flex-wrap: nowrap !important;
 }
 
-.dropdwn{
+.dropdwn {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-.drop{
+#margin {
+    margin-top: 3%;
+}
+
+.drop {
     background-color: #004a8b;
     color: #fff;
     padding: 15px 5px;
@@ -210,7 +214,7 @@ h100 {
 }
 
 .link-header li {
-    margin: 0 12px!important;
+    margin: 0 12px !important;
     position: relative;
 }
 
@@ -319,11 +323,12 @@ ul {
 }
 
 
-#O365_SearchBoxContainer_container{
+#O365_SearchBoxContainer_container {
     display: none !important;
 }
 
-a:focus, a:hover{
+a:focus,
+a:hover {
     text-decoration: none !important;
 }
 
