@@ -14,9 +14,10 @@ import "@pnp/sp/site-users/web";
 import { sp, List, IItemAddResult, UserCustomActionScope, Items, Item, Web } from "@pnp/sp/presets/all";
 import { SPComponentLoader } from '@microsoft/sp-loader';
 import { ISiteUserInfo } from '@pnp/sp/site-users/types';
-
+import { Navigation } from 'spfx-navigation';
 import styles from './HeaderAppApplicationCustomizer.module.scss';
 import * as $ from 'jquery';
+
 
 // require("./Styles/global.css")
 // require("./Styles/basic.css")
@@ -177,7 +178,7 @@ export default class HeaderAppApplicationCustomizer
                                         <li>
                                             <div>
                                                 <div class="acceuilbtn">
-                                                    <a href="#" onclick='parent.location="${this.context.pageContext.web.absoluteUrl}/SitePages/Home.aspx"' class="flex-basic-n flex-align-center">
+                                                    <a onclick='parent.location="${this.context.pageContext.web.absoluteUrl}/SitePages/Home.aspx"' class="flex-basic-n flex-align-center">
                                                         <div class="icn">
                                                             <img src="${require<string>('./images/icn-home.png')}" alt="">
                                                         </div>
