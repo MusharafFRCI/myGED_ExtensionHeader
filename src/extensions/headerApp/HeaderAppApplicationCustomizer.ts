@@ -18,6 +18,7 @@ import { Navigation } from 'spfx-navigation';
 import styles from './HeaderAppApplicationCustomizer.module.scss';
 import * as $ from 'jquery';
 
+// import { MSGraphClient } from "@microsoft/sp-http";
 
 // require("./Styles/global.css")
 // require("./Styles/basic.css")
@@ -28,6 +29,9 @@ require("./scripts/custom.js")
 // require('./scripts/translate.js')
 SPComponentLoader.loadCss('https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css');
 SPComponentLoader.loadScript("https://kit.fontawesome.com/d97b87339f.js");
+
+let accueilUrl2: string = "https://ncaircalin.sharepoint.com/sites/TestMyGed";
+let accueilUrl: string = "https://ncaircalin.sharepoint.com/sites/MyGed";
 
 const LOG_SOURCE: string = 'HeaderAppApplicationCustomizer';
 
@@ -50,6 +54,8 @@ export default class HeaderAppApplicationCustomizer
     private _topPlaceholderHeader: PlaceholderContent | undefined;
     private _bottomPlaceholderFooter: PlaceholderContent | undefined;
 
+    // private graphClient: MSGraphClient;
+
     @override
     public onInit(): Promise<void> {
         Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
@@ -62,6 +68,23 @@ export default class HeaderAppApplicationCustomizer
         //The below code is used to call render method for generating the HTML elements.  
         this._renderPlaceHoldersHeaderandFooter();
 
+
+        // return new Promise<void>(
+        //     (resolve: () => void, reject: (error: any) => void): void => {
+        //         sp.setup(
+        //             {
+        //                 spfxContext: this.props.context
+        //             });
+
+        //         this.context.msGraphClientFactory.getClient().then(
+        //             (client: MSGraphClient): void => {
+        //                 this.graphClient = client;
+        //                 resolve();
+        //             },
+        //             (err) => reject(err)
+        //         );
+        //     }
+        // );
         sp.setup(
             {
                 spfxContext: this.props.context
@@ -69,6 +92,7 @@ export default class HeaderAppApplicationCustomizer
             });
 
         return Promise.resolve();
+
     }
 
     private language = navigator.language;
@@ -334,6 +358,17 @@ export default class HeaderAppApplicationCustomizer
                     // togglebtn.addEventListener('click', () => {
                     //     document.querySelector(".link-header").classList.toggle("toggled-nav");
                     // })
+
+                    // if (window.location.href.match(accueilUrl2)) {
+                    //     var isAdmin = this.checkIfUserIsAdmin(this.graphClient);
+                    //     if (isAdmin) {
+                    //         // Hide the SharePoint wheel or spinner
+                    //         $("#O365_MainLink_Settings_container").css("display", "block");
+                    //         console.log("You're an admin")
+                    //     } else if (!isAdmin){
+                    //         console.log("You're not an admin")
+                    //     }
+                    // }
                 }
             }
         }
@@ -440,6 +475,47 @@ export default class HeaderAppApplicationCustomizer
         }
 
     }
+
+    // public async checkIfUserIsAdmin(graphClient: MSGraphClient): Promise<boolean> {
+    //     try {
+    //         const groups = await graphClient.api("/me/transitiveMemberOf/microsoft.graph.group?$count=true&$top=999").get();
+    //         const groupList = groups.value;
+
+    //         if (!groupList.length) {
+    //             return false;
+    //         }
+
+    //         const isAdmin = groupList.some((group: { displayName: string }) => group.displayName === "MYGED_ADMIN");
+    //         const isRefUser = groupList.some((group: { displayName: { startsWith: (arg0: string) => any } }) => group.displayName.startsWith("MYGED_REF"));
+    //         const isGuestUser = groupList.some((group: { displayName: { startsWith: (arg0: string) => any } }) => group.displayName.startsWith("MYGED_GUEST"));
+
+    //         return isAdmin || isRefUser || isGuestUser;
+    //     } catch (error) {
+    //         console.log(error);
+    //         return false;
+    //     }
+    // }
+
+    // public async checkIfUserIsAdmin(graphClient: MSGraphClient): Promise<boolean> {
+    //     try {
+    //         const groups = await graphClient.api('/me/transitiveMemberOf/microsoft.graph.group?$count=true&$top=999').get();
+    //         const groupList = groups.value;
+
+    //         if (!groupList.length) {
+    //             return false;
+    //         }
+
+    //         const isAdmin = groupList.some(group => group.displayName === 'MYGED_ADMIN');
+    //         const isRefUser = groupList.some(group => group.displayName.startsWith('MYGED_REF'));
+    //         const isGuestUser = groupList.some(group => group.displayName.startsWith('MYGED_GUEST'));
+
+    //         return isAdmin || isRefUser || isGuestUser;
+
+    //     } catch (error) {
+    //         console.log(error);
+    //         return false;
+    //     }
+    // }
 
     private _onDispose(): void {
         console.log('[HeaderAndFooterAppExtensionApplicationCustomizer._onDispose] Disposed from the top header and bottom footer placeholders.');
